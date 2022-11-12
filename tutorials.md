@@ -1,5 +1,6 @@
 https://code.visualstudio.com/docs/python/python-tutorial
 
-.venv\scripts\activate
+https://realpython.com/python-virtual-environments-a-primer/
 
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+https://github.com/petercorke/robotics-toolbox-python/wiki
+
