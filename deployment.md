@@ -45,7 +45,7 @@ Despues de esto VS Code crea automaticamente un workspace para este proyecto don
 
 ## La recomendación es entonces crear un environment
 
-Desde el terminal de VS code. Le debe aparecer una ventana preguntando si quiere vincular este enviroment al workspace actual, selecciones Si.
+Desde el terminal de VS code envie el siguiente comando. Despues de enviado le debe aparecer una ventana preguntando si quiere vincular este environment al workspace actual, selecciones Si.
 
 ```shell script
 python -m venv .robotenv
@@ -77,6 +77,8 @@ Luego de activarlo deberá aparecer al lado izquierdo entre parentesis el nombre
 
 ```shell script
 python -m pip install --upgrade pip
+```
+```shell script
 pip install -r requirements.txt
 ```
 
