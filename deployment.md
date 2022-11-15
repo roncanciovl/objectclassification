@@ -28,3 +28,9 @@ Configurar .gitignore para evitar que el environment se guarde en el repositorio
 Adicionando la siguiente linea
 
 .robotenv
+
+
+Actualizar requerimientos de paquestes
+
+pip freeze > requirements.txt
+
