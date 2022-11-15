@@ -10,9 +10,9 @@ Desde VScode presionar Ctrl+Shift+P, luego escribir Pyyhon: Select Interpreter, 
 
 Comandos :
 
-python -m venv robotenv
+python -m venv .robotenv
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-robotenv\Scripts\activate
+.robotenv\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 
@@ -21,3 +21,8 @@ Si se cierra este terminal y se abre otro nuevo, es necesario activar el environ
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 robotenv\Scripts\activate
+
+
+Configurar .gitignore para evitar que el environment se guarde en el repositorio
+
+echo ‘.robotenv' > .gitignore
