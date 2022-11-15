@@ -25,4 +25,6 @@ robotenv\Scripts\activate
 
 Configurar .gitignore para evitar que el environment se guarde en el repositorio
 
-echo ‘.robotenv' > .gitignore
+Adicionando la siguiente linea
+
+.robotenv
