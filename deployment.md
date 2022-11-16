@@ -9,16 +9,26 @@ Se requiere tener instalado el interpretador de python en version mayor a 3.9.0
 
 # Pruebas desde VS Code
 
-Asgurarse de instalar la extensión de python para VS Code 
+Un tutorial para la instalación de VS code se encuentra en este link:
 https://code.visualstudio.com/docs/python/python-tutorial
 
 
-Abra un terminal en VS code y verifique el siguiente comando
+Abra un terminal (menu superior) en VS code y verifique el siguiente comando
 
 ```shell script
 python --version
 ```
-Si la respuesta fue una versión de Python mayor a 3.9.0 puede saltar a implementación, si no entonces instalar una versión más reciente. En caso de ningún retorno por parte de este comando, entonces verificar lo siguiente
+Si la respuesta fue una versión de Python mayor a 3.9.0 puede saltar a implementación. 
+
+Si no, entonces deberá instalar una versión más reciente.
+
+Si previamente instaló Python con anaconda, una opción es realizar un upgrade de anconda, para esto abra el Anaconda prompt y envie el siguiente comando, puede tardar mucho.
+
+```shell script
+conda install python=3.10.8
+```
+
+En caso de ningún retorno por parte de este comando, o debera instalar python https://www.python.org/downloads/release/python-3108/ o debe entonces verificar lo siguiente
 
 1. Verifique que el interpretador de python está instalado, si está instalado entonces
 2. Primero abrir un terminal del sistema operativo y probar el comando anterior, si no funciona
@@ -71,17 +81,6 @@ Luego de activarlo deberá aparecer al lado izquierdo entre parentesis el nombre
 (.robotenv) C:\Users\username\
 ```
 
-
-
-## Por ultimo se instalan los paquetes en el environment (.robotenv)
-
-```shell script
-python -m pip install --upgrade pip
-```
-```shell script
-pip install -r requirements.txt
-```
-
 Si se cierra este terminal y se abre otro nuevo, es necesario activar el environment otra vez:
 
 ```shell script
@@ -89,14 +88,42 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 .robotenv\Scripts\activate
 ```
 
+## Por ultimo se instalan los paquetes en el environment (.robotenv)
+
+```shell script
+python -m pip install --upgrade pip
+```
+Si en este punto le aparece el siguiente WARNING o un error, la instalación requiere unas configuraciones adicionales. En caso contrario salte al siguiente comando.
+
+```shell script
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+```
+Probablemente su environment tomó una preinstalación del interpretador de Python de Anaconda o de alguna otra preninstalación, y su environment no encuentra el camino o PATH a algunas "libraries" necesarias.
+
+La solución es agregar el PATH C:\\...\anaconda3\Library\bin a las variables de entorno del sistema operativo. Note que los ... depende de cada computador, nomarmenlte la carpeta que necesitamos se encuentra en este camino o PATH C:\Users\username\anaconda3\Library\bin pero debera verificarlo en su computador. 
+
+Pasos:
+
+1. Cierre VScode
+2. Agregue este PATH a través de "Editar la variables de entorno del sistema" (busqueda de windows). No olvide al final darle aceptar a todas la ventanas. https://parzibyte.me/blog/2017/12/21/agregar-directorio-path-windows/
+3. Abra de nuevo VScode
+4. Habilite los permisos para activar el environment
+5. Active el environment
+6. Verifique el cambio, enviando el comando de instalación anterior: python -m pip install --upgrade pip
 
 
-El archivo .gitignore se ha configurado para evitar que el environment se guarde en el repositorio
+Siguiente comando:
 
-Adicionando la siguiente linea dentro en el archivo
 
-.robotenv
+```shell script
+pip install -r requirements.txt
+```
 
+
+## Anotaciones adicionales. No son necesarias en la instalación
+
+
+El archivo .gitignore se ha configurado para evitar que el environment se guarde en el repositorio. Adicionando la siguiente linea dentro en el archivo: .robotenv
 
 En caso de instalar nuevos paquetes, se require actualizar el archivo de requerimientos de paquetes
 
