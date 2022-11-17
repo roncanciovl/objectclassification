@@ -198,3 +198,7 @@ Desde el terminal de vs code, envie el siguiente comando. Probablemente require 
 git pull
 ```
 
+## VS code no funciona de acuerdo a lo esperado
+
+Ctrl+Shift+P -> Reload Window
+
