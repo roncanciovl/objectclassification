@@ -5,6 +5,8 @@ import numpy as np
 import os, cv2
 import enum 
 
+# https://keras.io/api/
+
 Px = 256
 
 class Categories(enum.Enum):
@@ -44,7 +46,9 @@ def testIAwithImage():
     #plt.imshow(cv2.resize(img,(Px,Px)))
     # Test Code
     img = cv2.imread('./test_images/B1_G3.png')
-    # detectObjectAI(img)
-    # cv2.imshow('ImageWindow', img)
-    # cv2.waitKey()
+    detectObjectAI(img)
+    cv2.imshow('ImageWindow', img)
+    cv2.waitKey()
+
+testIAwithImage()    
 
