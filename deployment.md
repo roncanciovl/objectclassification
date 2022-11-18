@@ -100,14 +100,14 @@ WARNING: pip is configured with locations that require TLS/SSL, however the ssl 
 ```
 Probablemente su environment tomó una preinstalación del interpretador de Python de Anaconda o de alguna otra preninstalación, y su environment no encuentra el camino o PATH a algunas "libraries" necesarias.
 
-La solución es agregar el PATH C:\\...\anaconda3\Library\bin a las variables de entorno del sistema operativo. Note que los ... depende de cada computador, nomarmenlte la carpeta que necesitamos se encuentra en este camino o PATH C:\Users\username\anaconda3\Library\bin pero debera verificarlo en su computador. 
+La solución es agregar el PATH C:\\...\anaconda3\Library\bin a las variables de entorno del sistema operativo. Note que los ... depende de cada computador, normalmente la carpeta que necesitamos se encuentra en este camino o PATH C:\Users\username\anaconda3\Library\bin pero deberá verificarlo en su computador. 
 
 Pasos:
 
 1. Cierre VScode
 2. Agregue este PATH a través de "Editar la variables de entorno del sistema" (busqueda de windows). No olvide al final darle aceptar a todas la ventanas. https://parzibyte.me/blog/2017/12/21/agregar-directorio-path-windows/
 3. Abra de nuevo VScode
-4. Habilite los permisos para activar el environment
+4. Habilite los permisos para activar el environment desde un terminal
 5. Active el environment
 6. Verifique el cambio, enviando el comando de instalación anterior: python -m pip install --upgrade pip
 
@@ -190,7 +190,9 @@ Verifique que las bibliotecas se cargaron con el siguiente comando en MATLAB
 ```
 REf: https://www.mathworks.com/matlabcentral/answers/1750425-python-virtual-environments-with-python-interface
 
-# Cómo actualizar el código si hay un nuevo release en el repositorio de Github
+# Ayuda con GIT
+
+## Cómo actualizar el código si hay un nuevo release en el repositorio de Github
 
 Desde el terminal de vs code, envie el siguiente comando. Probablemente require instalar GIT. 
 
@@ -201,4 +203,8 @@ git pull
 ## VS code no funciona de acuerdo a lo esperado
 
 Ctrl+Shift+P -> Reload Window
+
+## Otros
+
+Would you like Code to periodically run 'git fetch'? TODO
 

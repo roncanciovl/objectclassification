@@ -2,7 +2,7 @@
 
 https://code.visualstudio.com/docs/python/python-tutorial
 
-# Environment
+# Virtual Environments
 
 https://realpython.com/python-virtual-environments-a-primer/
 
@@ -21,11 +21,13 @@ https://www.mathworks.com/help/matlab/matlab_external/ways-to-call-python-from-m
 https://www.mathworks.com/help/matlab/ref/pyrunfile.html
 
 
-# Git
+# Git - Source Control
 
 https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
 
-# Video
+https://code.visualstudio.com/docs/sourcecontrol/overview#_remotes
+
+# Capturing Video
 
 OpenCV settings
 

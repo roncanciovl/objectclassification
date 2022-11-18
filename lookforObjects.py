@@ -74,6 +74,14 @@ def getCenter(pts, img):
   
     # Perform PCA analysis
     mean = np.empty((0))
+
+    #The principal components of a collection of points in a real coordinate space
+    #are a sequence of p unit vectors, where the i-th vector
+    # is the direction of a line that best fits the data
+    # while being orthogonal to the first i-1 vectors. 
+    # Here, a best-fitting line is defined as one that minimizes
+    # the average squared perpendicular distance from the points to the line.
+    # The eigenvector is a vector that is associated with a set of linear equations.
     mean, eigenvectors, eigenvalues = cv.PCACompute2(data_pts, mean)
   
     # Store the center of the object
