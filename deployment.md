@@ -1,4 +1,4 @@
-# Información para que funcione el código 
+# Recomendaciones para que el código se logre ejecutar 
 
 La instalación requiere 2 GB de memoria
 
@@ -133,7 +133,7 @@ pip freeze > requirements.txt
 
 # Como se verifica la instalación?
 
-Ejecutar(Run) el script o archivo ai.py, despues de algunos segundos debería abrir una imagen, si funcionó, entonces presionar cualquier tecla para terminar la ejecución.
+Ejecutar(Run) el script o archivo ai.py, despues de algunos segundos debería abrir una imagen y aparecer en el termina la categoira del objeto en la imagen, si funcionó, entonces presionar cualquier tecla para terminar la ejecución.
 
 Cuando se ejecuta un script de python (*.py) vscode abre otro terminal, este nuevo terminal tiene el nombre de Python, aqui el environment no esta activado. Por lo que para hacer cambios en el evironment hay que cambiar de terminal o abrir uno nuevo y activar alli el environment.
 
@@ -190,21 +190,49 @@ Verifique que las bibliotecas se cargaron con el siguiente comando en MATLAB
 ```
 REf: https://www.mathworks.com/matlabcentral/answers/1750425-python-virtual-environments-with-python-interface
 
-# Ayuda con GIT
+# Recomendaciones importantes para usar este repositorio de GitHub
+
+Si su intención es usar todo el código para su proyecto, la recomendación es crear un "branch" nuevo a partir del branch del master (tambien llamado main). Desde el terminal envie el siguiente comando. Como sugerencia new-branch-name puede ser el nombre de su robot  
+
+```shell script
+git checkout -b ＜new-branch-name＞
+```
+A partir de aquí ya puede realizar cambios en el código.
 
 ## Cómo actualizar el código si hay un nuevo release en el repositorio de Github
 
-Desde el terminal de vs code, envie el siguiente comando. Probablemente require instalar GIT. 
+Primero se recomienda realizar un "commit" en su branch, antes de cualquier actualización. [Saving changes on git](https://www.atlassian.com/git/tutorials/saving-changes)
+
+Desde el terminal de vs code, envie el siguiente comando. Asegurese que el PATH del terminal esta en la carpeta del proyecto. 
+
+```shell script
+git checkout main
+```
 
 ```shell script
 git pull
 ```
+Esto primero actualiazrá sus archivos en el computador (tambien llamado local) en el branch principal (main o master) con los archivos del respositorio (tambien llamado remote) 
 
-## VS code no funciona de acuerdo a lo esperado
+Luego el siguiente comando fusionará las ultimas actualizaciones que ya están en su computador (en el branch principal) con el código del branch de su robot ＜your-branch-name＞. Aqui puden aparecer conflictos que tendrá que revisar archivo por archivo. 
 
-Ctrl+Shift+P -> Reload Window
 
+```shell script
+git checkout ＜your-branch-name＞
+```
+```shell script
+git merge main
+```
+Si algo salió mal con el merge y quiere devolverse al estado anterior envie el siguiente comando (solo funciona si realizó un commit antes de la actualización):
+
+```shell script
+git reset --hard HEAD~1
+```
 ## Otros
 
-Would you like Code to periodically run 'git fetch'? TODO
+Would you like Code to periodically run 'git fetch'? No
+
+# VS code no funciona de acuerdo a lo esperado
+
+Ctrl+Shift+P -> Reload Window
 

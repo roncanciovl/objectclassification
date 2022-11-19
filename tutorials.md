@@ -36,3 +36,7 @@ https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html
 Use you cellphone as mobile camera
 
 https://www.pcmag.com/how-to/how-to-turn-your-smartphone-into-a-wireless-webcam
+
+# Python - Software Implementation
+
+https://realpython.com/python-main-function/
