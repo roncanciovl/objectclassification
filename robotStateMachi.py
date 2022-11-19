@@ -26,7 +26,7 @@ transitions = [
 # Initialize
 machine = Machine(wallyActivity, states=states, transitions=transitions, initial='home')
 
-
+print(wallyActivity.state)
 
 
 

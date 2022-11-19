@@ -26,14 +26,15 @@ For more information about how to deploy software, you may also check out [tutor
 ## Files
 
 
-- `ai.py` pedricts whether there is or not an object (blottle, can, other) in the input image
-- `lookforObjects.py` look for the center of an object and its orientation. If no object, there is no return.
-- `ai_video.py` test on continuous predictions on frames from webcam's video
-- `robotClasses.py` [Class Diagram](https://app.genmymodel.com/personal/projects/_cYSoYGWiEe2ck8ytUMEi6A) for Robot's use cases. Edited in www.genmymodel.com  
-- `robotStateMach.py` State Machine of the robot.
+- `ai.py` This a module that classifies the content of the image as blottle, can, other, and no_object. It returns a category.
+- `lookforObjects.py` This is a module that looks for the center of any object in the image and their orientations. Return a list of orientations, a list of centers and an image with visual info. If no objects, it returns empty lists.
+- `lookObjectsVideo.py` lookforObjects module working on on frames from webcam's video
+- `ai_video.py` test on frames from webcam's video
+- `robotClasses.py` This is a file with the [Class Diagram](https://app.genmymodel.com/personal/projects/_cYSoYGWiEe2ck8ytUMEi6A) for the robot use cases. Edited in www.genmymodel.com  
+- `robotStateMach.py` This is a file with the Robot State Machine.
 - `gui.py` Simple graphical user interface to control robot
 - `test_camera.py` Code to check out whether your camera is working
-- `training.py` AI training code using Convolutional Neural Networks
+- `training.py` This is a file with AI training code using Convolutional Neural Networks
 - `kinematics.py` kinematics calculations and robot model
 
 

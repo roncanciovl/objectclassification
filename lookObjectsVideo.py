@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
-import ai as ai_module
+
+import lookforObjects as lookModule
 
 
 # So I simply pass 0 (or -1).
@@ -14,12 +15,19 @@ while(True):
     # Capture frame-by-frame
     ret, frame = cap.read()
 
-    # Display the resulting frame
-    cv2.imshow('frame', frame)
-    category = ai_module.classifyObject(frame)
-    print(f'Class with the highest probability: {ai_module.Categories(category)}')
-    print(f'Object belongs to category number : {category}')
+    # orientations and centers are lists
+    orientations, centers, out_img = lookModule.getOrientationsAndCenters(frame)
 
+    # Display the new image
+    cv2.imshow('Out Image', out_img)
+
+    #Print orientation and center for the first object found in the image
+    if not orientations:
+        print('Empty list')
+    else:
+        print(orientations[0])
+        print(centers[0])
+   
     # 1.waitKey(0) will display the window infinitely until any keypress (it is suitable for image display).
     # 2.waitKey(1) will display a frame for 1 ms, after which display will be automatically closed. Since the OS has a minimum time between switching threads, the function will not wait exactly 1 ms, it will wait at least 1 ms, depending on what else is running on your computer at that time.
     

@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+from robotStateMachi import *
  
 root = Tk()
 root.geometry("200x150")
@@ -12,7 +13,7 @@ leftframe.pack(side=LEFT)
 rightframe = Frame(root)
 rightframe.pack(side=RIGHT)
  
-label = Label(frame, text = "Robot GUI")
+label = Label(frame, text = "Robot State: " + wallyActivity.state)
 label.pack()
  
 button1 = Button(leftframe, text = "Start")
@@ -37,7 +38,7 @@ button3.pack(padx = 3, pady = 3)
 class Window:
     def __init__(self, master):
          
-        label_frame = tk.LabelFrame(master, text = "Objeto")
+        label_frame = tk.LabelFrame(master, text = "Objet to Pick up")
         label_frame.pack(padx = 5, pady = 5)
  
         var = tk.IntVar()
