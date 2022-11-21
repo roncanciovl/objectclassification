@@ -1,6 +1,11 @@
 """
  Class Diagram for Garbage Selection Robot - Henry Roncancio - V1
 """
+#SE3 is the datatype used for pose. Spatialmath is module from Peter Corke robotics Toolbox
+from spatialmath import SE3
+#Images in opencv-pthon are considered as numpy.ndarray
+from numpy import ndarray
+
 
 
 

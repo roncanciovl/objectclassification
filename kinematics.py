@@ -29,9 +29,24 @@ print(robot)
 
 robot.plot(robot.q)
 
-T = robot.fkine([pi/4, pi/4, pi/4])
-print(T)
+def testOnkine():
+  #Forward kinematics
+  T = robot.fkine([pi/4, pi/4, pi/4])
+  print(T)
+  #Inverse kinematics with numerical method
+  solution = robot.ikine_LM(T)
+  if (solution[1] == True):
+    print("A solution for ikine was found")
+    q = solution[0]
+    print(q)
+  else:
+      print("No solution was found")
 
 #Create an object of SE3 class, i.e., Homogeneous transformation or pose.
 #As example, this pose could be the end-effector pose to go to the container
 pose_in_container = SE3()
+# SE3 is a transformation but it is aslo a pose
+endeffectorPose = SE3()
+
+if __name__ == "__main__":
+    testOnkine()

@@ -36,6 +36,7 @@ For more information about how to deploy software, you may also check out [tutor
 - `test_camera.py` Code to check out whether your camera is working
 - `training.py` This is a file with AI training code using Convolutional Neural Networks
 - `kinematics.py` kinematics calculations and robot model
+- `serialcomTest.py` test on serial communications with pyserial
 
 
 For any other questions, solicitations email [Henry Roncancio](mailto:henryroncanciovelandia@gmail.com) (initial author)
