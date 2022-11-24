@@ -1,6 +1,7 @@
 
 from roboticstoolbox import *
 # https://github.com/petercorke/robotics-toolbox-python/
+# https://github.com/petercorke/robotics-toolbox-python/wiki/Kinematics
 # https://github.com/petercorke/robotics-toolbox-python/blob/master/notebooks/kinematics.ipynb
 
 

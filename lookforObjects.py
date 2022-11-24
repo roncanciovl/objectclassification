@@ -1,5 +1,5 @@
-# Added getCenter function
-
+# Principal component analysis method for orientation calculation on objects inside an image
+# https://automaticaddison.com/how-to-determine-the-orientation-of-an-object-using-opencv/
 
 import cv2 as cv
 from math import atan2, cos, sin, sqrt, pi
