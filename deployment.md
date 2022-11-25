@@ -141,7 +141,7 @@ Cuando se ejecuta un script de python (*.py) vscode abre otro terminal, este nue
 
 Necesitamos saber el PATH al script de nuestro environment que llama el ejecutable de python
 
-Para esto podemos ejecutar codigo de python desde el terminal. Envie el comando python en el terminal para abrir una consola de python dentro del terminal.
+Para esto podemos ejecutar codigo de python desde el terminal en VScode asegurandose que nuestro environment este activo en ese terminal. Envie el comando python en el terminal para abrir una consola de python dentro del terminal.
 
 ```shell script
 python
@@ -167,7 +167,7 @@ Abra una ventana de comandos de MATLAB y envie esta configuración cambiando el 
 
 ```shell script
 >> pyenv('Version', ... 
-            'C:\Users\username\.robotenv\Scripts\python', ... 
+            'C:\Users\username\.robotenv\Scripts\python.exe', ... 
             'ExecutionMode','OutOfProcess') 
 ```
 
@@ -176,18 +176,28 @@ Respuesta esperada o similar
 ```shell script
 ans = 
   PythonEnvironment with properties: 
-          Version: "3.8" 
-       Executable: "C:\Users\username\.robotenv\Scripts\python.EXE" 
-          Library: "C:\Users\gmkep\AppData\Local\Programs\Python\Python38\python38.dll" 
-             Home: "C:\Users\username\py38" 
+          Version: "3.9" 
+       Executable: "C:\Users\username\objectclassification\.robotenv\Scripts\python.exe" 
+          Library: "C:\Users\username\anaconda3\python39.dll" 
+             Home: "C:\Users\username\objectclassification\.robotenv" 
            Status: NotLoaded 
     ExecutionMode: OutOfProcess
 ```
 Verifique que las bibliotecas se cargaron con el siguiente comando en MATLAB
 
 ```shell script
->> py.importlib.import_module('tensorflow-cpu')
+>> py.importlib.import_module('cv2')
 ```
+Si no hay error y hay alguna answer (ans=), este modulo ya esta listos para usar.
+
+IMPORTANTE: El comando anterior requiere ingresar el nombre de modulo de python, este nombre de modulo es el nombre que aparece al inicio de los archivos de python (*.py) 
+
+```shell script
+import <nombre_del_modulo>
+```
+Debera importar todos los modulos de python que requiere un Script de python (*.py) para que le Script funcione
+
+
 REf: https://www.mathworks.com/matlabcentral/answers/1750425-python-virtual-environments-with-python-interface
 
 # Recomendaciones importantes para usar este repositorio de GitHub
