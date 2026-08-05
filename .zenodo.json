@@ -1,0 +1,39 @@
+{
+  "title": "objectclassification: Garbage classification and robotic selection using convolutional neural networks",
+  "description": "<p>Computer vision system for garbage classification and selection with a robotic arm. Combines convolutional neural network models for object recognition with inverse kinematics for manipulation, and includes a graphical interface for operation and real-time video inference.</p><p>Developed for teaching and applied research in the Mechatronics Engineering program at Universidad Militar Nueva Granada. Includes deployment documentation in Spanish aimed at students new to Python and version control.</p>",
+  "upload_type": "software",
+  "language": "eng",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Roncancio Velandia, Henry Antonio",
+      "affiliation": "Universidad Militar Nueva Granada",
+      "orcid": "0009-0009-9954-9813"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Mechatronics Engineering Students, Universidad Militar Nueva Granada",
+      "affiliation": "Universidad Militar Nueva Granada",
+      "type": "Other"
+    }
+  ],
+  "keywords": [
+    "convolutional neural networks",
+    "computer vision",
+    "waste classification",
+    "robotic manipulation",
+    "inverse kinematics",
+    "machine learning",
+    "Python",
+    "robotics education"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/roncanciovl/objectclassification",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
